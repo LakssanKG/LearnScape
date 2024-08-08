@@ -1,0 +1,116 @@
+/*************    ACHEIVEMENTS     **************/
+
+.about__acheivements{
+    padding-top: 10rem;
+}
+
+.about__acheivements-left h1{
+    padding-bottom: 2rem;
+}
+
+
+.about__acheivements-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+
+.about__acheivements-right > p{
+    margin: 1.6rem 0 2.5rem;
+}
+
+.acheivements__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3rem;
+    gap: 1.5rem;
+}
+
+.acheivement__card{
+    background: var(--color-sec);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.acheivement__card:hover{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.acheivement__icon{
+    background: var(--color-lred);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.acheivement__card:nth-child(2)
+.acheivement__icon{
+    background: var(--color-green);
+}
+
+.acheivement__card:nth-child(3)
+.acheivement__icon{
+    background: var(--color-yellow);
+}
+
+.acheivement__card p{
+    margin-top: 1rem;
+}
+
+/************    TEAM      ****************/
+.team h2{
+    text-align: center;
+    padding-bottom: 4rem;
+}
+.team__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team__member{
+    background: var(--color-bg3);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.team__member:hover{
+    background: transparent;
+    border-color: var(--color-bg3);
+}
+
+.team__member-info *{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.team__member-socials{
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    background: var(--color-bg2);
+    border-radius: 2rem 0 0 1rem;
+    transition: var(--transition);
+}
+
+.team__member:hover 
+.team__member-socials{
+    right: 0;
+}
+
+.team__member-socials a{
+    padding: 1rem;
+}
+
