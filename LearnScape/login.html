@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <!-- FAV ICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- GOOGLE FONTS (MONTESERRAT) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+    .form-value .inputbox input:focus ~ label,
+    .form-value .inputbox input:valid ~ label {
+        top: -5px;
+        font-size: 1em;
+        color: white;
+    }
+
+    .form-value .inputbox input:valid ~ label {
+        font-size: 1em;
+        color: white;
+    }
+    </style>
+
+    <script>
+        function validate() {
+            var a = document.getElementById("text1").value;
+            var b = document.getElementById("text2").value;
+            if (a === "") {
+                window.alert("Please enter username");
+            } else if (b === "") {
+                window.alert("Enter Password");
+            } else if (b.length < 6) {
+                window.alert("Password should be at least 6 characters");
+            } else {
+                open("index.html");
+            }
+        }
+    </script>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form>
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <i class="uil uil-user"></i>
+                        <input type="text" name="text1" id="text1" >
+                        <label for="text1">User Name</label>
+                    </div>
+                    <div class="inputbox">
+                        <i class="uil uil-file-lock-alt"></i>
+                        <input type="password" name="text2" id="text2" >
+                        <label for="text2">Password</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Remember Me</label>
+                    </div>
+                    <button type="submit" onclick="validate()">Log in</button>
+                    <div class="register">
+                        <p>Don't have an account? <a href="register.html">Register</a> </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
